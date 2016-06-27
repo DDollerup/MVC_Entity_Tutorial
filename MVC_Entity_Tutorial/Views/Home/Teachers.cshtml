@@ -1,0 +1,31 @@
+﻿@using MVC_Entity_Tutorial.Models;
+@model List<Teacher>
+@{
+    ViewBag.Title = "Teachers";
+}
+
+<section>
+    <h2>Teachers</h2>
+    <hr />
+    <table class="table-striped">
+        @foreach (Teacher teacher in Model)
+        {
+            <tr>
+                <td>
+                    Firstname:
+                </td>
+                <td>
+                    @teacher.Firstname
+                </td>
+                <td>
+                    Lastname:
+                </td>
+                <td>
+                    @teacher.Lastname
+                </td>
+            </tr>
+        }
+    </table>
+</section>
+
+
