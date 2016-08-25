@@ -7,24 +7,49 @@
 <section>
     <h2>Teachers</h2>
     <hr />
-    <table class="table-striped">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                <a href="/Home/TeachersFirstnameAscending">Firstname</a>
+            </th>
+            <th>
+                <a href="/Home/TeachersLastnameAscending">Lastname</a>
+            </th>
+            <th>
+                View Details
+            </th>
+            <th>
+                Update Teacher
+            </th>
+            <th>
+                Delete Teacher
+            </th>
+        </tr>
         @foreach (Teacher teacher in Model)
         {
             <tr>
                 <td>
-                    Firstname:
-                </td>
-                <td>
                     @teacher.Firstname
-                </td>
-                <td>
-                    Lastname:
                 </td>
                 <td>
                     @teacher.Lastname
                 </td>
+                <td>
+                    <a href="/Home/ShowTeacher/@teacher.ID">More...</a>
+                </td>
+                <td>
+                    <a href="/Home/UpdateTeacher">Edit</a>
+                </td>
+                <td>
+                    <a href="/Home/DeleteTeacherSubmit" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
             </tr>
         }
+        <tr>
+            <td colspan="5">
+                <a href="/Home/CreateTeacher">Create Teacher</a>
+            </td>
+        </tr>
     </table>
 </section>
 

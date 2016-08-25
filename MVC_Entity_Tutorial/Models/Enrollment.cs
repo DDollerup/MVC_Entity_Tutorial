@@ -10,7 +10,6 @@ namespace MVC_Entity_Tutorial.Models
         public int ID { get; set; }
         public int CourseID { get; set; }
         public int StudentID { get; set; }
-
-        public List<Student> EnrolledStudents = new List<Student>();
+        public List<Student> EnrolledStudents;
     }
 }
